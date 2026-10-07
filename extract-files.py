@@ -46,6 +46,8 @@ blob_fixups: blob_fixups_user_type = {
             'default',
         ),
 
+    'vendor/lib64/anc.hal.so': blob_fixup()
+        .add_needed('libion.so'),
 }
 
 module = ExtractUtilsModule(
