@@ -83,6 +83,7 @@ BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
     androidboot.usbcontroller=a600000.dwc3 \
+    androidboot.vendor.qspa=true \
     androidboot.load_modules_parallel=true \
     androidboot.console=ttyMSM0 \
     androidboot.selinux=permissive
