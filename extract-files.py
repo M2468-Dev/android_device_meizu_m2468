@@ -40,6 +40,9 @@ lib_fixups: lib_fixups_user_type = {
 
 blob_fixups: blob_fixups_user_type = {
 
+    'vendor/bin/slim_daemon': blob_fixup()
+        .add_needed('libemutls_get_address.so'),
+
     'vendor/lib64/anc.hal.so': blob_fixup()
         .add_needed('libion.so'),
 
