@@ -188,6 +188,27 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.qti \
     android.hardware.health-service.qti_recovery
 
+# Init
+PRODUCT_PACKAGES += \
+    init.qcom.rc \
+    init.qti.kernel.rc \
+    init.target.rc \
+    init.qcom.factory.rc \
+    init.recovery.qcom.rc
+
+PRODUCT_PACKAGES += \
+    init.class_main.sh \
+    init.kernel.post_boot-kalama.sh \
+    init.kernel.post_boot.sh \
+    init.qcom.class_core.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.sh \
+    init.qti.kernel.sh \
+    init.qti.write.sh \
+    system_dlkm_modprobe.sh \
+    vendor_modprobe.sh
+
 # IPA
 PRODUCT_PACKAGES += \
     ipacm \
@@ -340,6 +361,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
 
+# Ueventd
+PRODUCT_PACKAGES += \
+    ueventd.qcom.rc
+
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
@@ -352,6 +377,10 @@ PRODUCT_PACKAGES += \
     android.hardware.usb.gadget-service.qti \
     audio.usb.default \
     usb_compositions.conf
+
+PRODUCT_PACKAGES += \
+    init.qcom.usb.sh \
+    init.qcom.usb.rc
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.accessory.xml \
