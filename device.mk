@@ -121,6 +121,11 @@ PRODUCT_PACKAGES += \
     lib_bt_ble \
     lib_bt_bundle
 
+# Boot control
+PRODUCT_PACKAGES += \
+    android.hardware.boot-service.qti \
+    android.hardware.boot-service.qti.recovery
+
 # Camera
 $(call soong_config_set_bool,camera,override_format_from_reserved,true)
 
