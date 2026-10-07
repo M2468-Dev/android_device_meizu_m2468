@@ -55,6 +55,9 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/anc.hal.so': blob_fixup()
         .add_needed('libion.so'),
 
+    'vendor/lib64/libqcodec2_core.so': blob_fixup()
+        .add_needed('libcodec2_shim.so'),
+
     (
         'vendor/lib64/libdpps.so',
         'vendor/lib64/libsnapdragoncolor-manager.so',
