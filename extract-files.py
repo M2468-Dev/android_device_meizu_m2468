@@ -38,7 +38,11 @@ lib_fixups: lib_fixups_user_type = {
     ): lib_fixup_vendor_suffix,
 }
 
-blob_fixups: blob_fixups_user_type = {}
+blob_fixups: blob_fixups_user_type = {
+
+    'vendor/lib64/anc.hal.so': blob_fixup()
+        .add_needed('libion.so'),
+}
 
 module = ExtractUtilsModule(
     'm2468',
