@@ -261,6 +261,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libril
 
+# SecureElement
+PRODUCT_PACKAGES += \
+    secure_element-service.meizu.xml
+
 # Security
 PRODUCT_PACKAGES += \
     android.hardware.hardware_keystore.xml
