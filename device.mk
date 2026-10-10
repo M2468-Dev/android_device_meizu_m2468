@@ -259,6 +259,19 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml
 
+# Overlays
+PRODUCT_PACKAGES += \
+    CarrierConfigOverlayM2468 \
+    ConnectivityOverlayM2468 \
+    FrameworkOverlayM2468 \
+    NetworkStackOverlayM2468 \
+    NfcOverlayM2468 \
+    SecureElementOverlayM2468 \
+    SettingsOverlayM2468 \
+    SystemUIOverlayM2468 \
+    TelephonyOverlayM2468 \
+    WifiOverlayM2468
+
 # Partitions
 PRODUCT_PACKAGES += \
     vendor_bt_firmware_mountpoint \
