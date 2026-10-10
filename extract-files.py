@@ -62,6 +62,12 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libhidlbase_shim.so'),
 
     (
+        'vendor/bin/hw/android.hardware.security.keymint-service-qti',
+        'vendor/bin/hw/android.hardware.security.keymint-service-spu-qti',
+    ): blob_fixup()
+        .add_needed('android.hardware.security.rkp-V3-ndk.so'),
+
+    (
         'vendor/lib64/libdpps.so',
         'vendor/lib64/libsnapdragoncolor-manager.so',
         'vendor/lib64/libsynclight.so',
