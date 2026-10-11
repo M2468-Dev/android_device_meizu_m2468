@@ -1503,9 +1503,6 @@ vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
 # QSPA
 system_ext/etc/init/qspa_system.rc
 system_ext/etc/qspa/qspa_default.rc
-vendor/bin/vendor.qti.qspa-service
-vendor/etc/init/vendor.qti.qspa-service.rc
-vendor/etc/vintf/manifest/vendor.qti.qspa-service.xml
 
 # QSPM
 vendor/bin/vendor.qti.qspmhal@1.0-service
