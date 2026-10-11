@@ -68,6 +68,11 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('AHardwareBuffer_release')
         .clear_symbol_version('AHardwareBuffer_unlock'),
 
+    'vendor/lib64/libarcsoft_high_dynamic_range_v5.so': blob_fixup()
+        .clear_symbol_version('rpcmem_alloc')
+        .clear_symbol_version('rpcmem_free')
+        .clear_symbol_version('rpcmem_to_fd'),
+
     (
         'vendor/bin/hw/android.hardware.security.keymint-service-qti',
         'vendor/bin/hw/android.hardware.security.keymint-service-spu-qti',
