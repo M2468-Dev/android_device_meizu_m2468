@@ -141,7 +141,7 @@ vendor/lib64/vendor.qti.voiceprint@1.0.so
 
 # Audio (Config)
 vendor/etc/card-defs.xml
-vendor/etc/audio/sku_pineapple/mixer_paths_pineapple_mtp.xml
+vendor/etc/audio/sku_kalama/mixer_paths_kalama_mtp.xml
 
 # Audio firmware
 vendor/firmware/RCV-m2468-cs35l43-delta-game-spk-prot.bin
@@ -784,28 +784,6 @@ vendor/firmware/evass.b18
 vendor/firmware/evass.b19
 vendor/firmware/evass.mbn
 vendor/firmware/evass.mdt
-vendor/firmware/evass.b00
-vendor/firmware/evass.b01
-vendor/firmware/evass.b02
-vendor/firmware/evass.b03
-vendor/firmware/evass.b04
-vendor/firmware/evass.b05
-vendor/firmware/evass.b06
-vendor/firmware/evass.b07
-vendor/firmware/evass.b08
-vendor/firmware/evass.b09
-vendor/firmware/evass.b10
-vendor/firmware/evass.b11
-vendor/firmware/evass.b12
-vendor/firmware/evass.b13
-vendor/firmware/evass.b14
-vendor/firmware/evass.b15
-vendor/firmware/evass.b16
-vendor/firmware/evass.b17
-vendor/firmware/evass.b18
-vendor/firmware/evass.b19
-vendor/firmware/evass.mbn
-vendor/firmware/evass.mdt
 
 # FASTCV
 vendor/lib64/libfastcvdsp_stub.so
@@ -928,11 +906,6 @@ vendor/firmware/a740_zap.elf
 vendor/firmware/a740_zap.mbn
 vendor/firmware/a740_zap.mdt
 vendor/firmware/a740_sqe.fw
-vendor/firmware/a740_zap.b00
-vendor/firmware/a740_zap.b01
-vendor/firmware/a740_zap.b02
-vendor/firmware/a740_zap.elf
-vendor/firmware/a740_zap.mdt
 vendor/firmware/gmu_gen70200.bin
 vendor/gpu/kbc/sequence_manifest.bin
 vendor/gpu/kbc/unified_kbcs_32.bin
@@ -1816,7 +1789,6 @@ vendor/etc/init/init_thermal-engine-v2.rc
 vendor/etc/thermal-engine.conf
 vendor/lib64/liblmthermallistner.so
 vendor/lib64/libthermalclient.so
-vendor/etc/thermal-engine.conf
 
 # Touchscreen
 vendor/firmware/goodix_cfg_group.bin
