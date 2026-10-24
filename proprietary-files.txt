@@ -141,6 +141,8 @@ vendor/lib64/vendor.qti.voiceprint@1.0.so
 
 # Audio (Config)
 vendor/etc/card-defs.xml
+vendor/etc/virtual_audio_policy_configuration.xml
+vendor/etc/audio/sku_kalama/mixer_paths_kalama_mtp.xml
 
 # Audio firmware
 vendor/firmware/RCV-m2468-cs35l43-delta-game-spk-prot.bin
