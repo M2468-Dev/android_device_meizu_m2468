@@ -77,7 +77,7 @@ BOARD_KERNEL_PAGESIZE    := 4096
 BOARD_KERNEL_CMDLINE := \
     mtdoops.fingerprint=$(LINEAGE_VERSION) \
     swinfo.fingerprint=$(LINEAGE_VERSION) \
-    qcom_geni_serial.con_enabled=1 \
+    qcom_geni_serial.con_enabled=0 \
     nosoftlockup \
     page_poison=1 \
     sysrq_always_enabled
