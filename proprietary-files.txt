@@ -630,7 +630,7 @@ vendor/lib64/libqcmaputils.so
 vendor/lib64/libqdi.so
 vendor/lib64/libqdp.so
 
-# Diag - from m2468 Flyme 10.5.2.1A
+# Diag
 system/lib64/vendor.qti.diaghal-V1-ndk.so
 system_ext/lib64/libdiag_system.so
 system_ext/lib64/libdiagatbparser_system.so
@@ -703,7 +703,7 @@ vendor/lib64/libtestutils.so
 vendor/lib64/libtinyxml2_1.so
 vendor/lib64/libvmfilexfer.so
 
-# Display (SDM) - from m2468 Flyme 12.6.0.0A
+# Display (SDM)
 vendor/lib64/libsdm-color.so
 
 # Display calibration data
@@ -1750,8 +1750,8 @@ vendor/etc/sensors/config/sns_wrist_pedo.json
 vendor/etc/sensors/hals.conf
 vendor/etc/sensors/sns_reg_config
 
-# Soter - from m2468 Flyme 12.6.0.0A
-system/app/SoterService/SoterService.apk|37bc7210b9a4843c522f275e23d4a4c8c2228fb7
+# Soter
+system/app/SoterService/SoterService.apk
 
 # Soter
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
