@@ -129,6 +129,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
 
+# Codec2
+PRODUCT_PACKAGES += \
+    libqti_c2_store_abi_check
+
 # Dirty hack for slim_daemon
 PRODUCT_PACKAGES += \
     libemutls_get_address
