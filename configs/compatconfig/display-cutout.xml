@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2026 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<config>
+    <compat-change
+        id="332679525"
+        name="OVERRIDE_LAYOUT_IN_DISPLAY_CUTOUT_MODE"
+        disabled="false"
+        overridable="true" />
+</config>

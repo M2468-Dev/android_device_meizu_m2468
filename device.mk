@@ -138,6 +138,9 @@ PRODUCT_PACKAGES += \
     libemutls_get_address
 
 # Display
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/compatconfig/display-cutout.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/compatconfig/display-cutout-compat-config.xml
+
 PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     vendor.qti.hardware.display.demura-service \
