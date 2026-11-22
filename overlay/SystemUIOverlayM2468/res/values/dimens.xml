@@ -5,8 +5,10 @@
 -->
 <resources>
     <item name="pixel_pitch" type="dimen" format="float">54.44</item>
+
     <dimen name="status_bar_icons_padding_end">0dp</dimen>
     <dimen name="status_bar_icons_padding_start">0dp</dimen>
     <dimen name="status_bar_padding_end">0dp</dimen>
     <dimen name="status_bar_padding_start">16dp</dimen>
+    <dimen name="physical_power_button_center_screen_location_y">1250px</dimen>
 </resources>
