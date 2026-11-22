@@ -157,7 +157,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-	android.hardware.biometrics.fingerprint-service-jv \
+	android.hardware.biometrics.fingerprint-service.meizu \
     android.hardware.fingerprint.prebuilt.xml
 
 # Fstab
