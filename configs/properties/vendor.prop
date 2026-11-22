@@ -158,6 +158,7 @@ vendor.meizu.ifaa.seccam.version=300
 vendor.meizu.ifaa.version=4
 
 # Gatekeeper
+vendor.gatekeeper.disable_spu=true
 vendor.gatekeeper.is_security_level_spu=0
 
 # Graphics
