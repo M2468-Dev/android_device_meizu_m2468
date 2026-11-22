@@ -194,6 +194,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qti.kernel.rc \
+    init.m2468.rc \
     init.target.rc \
     init.qcom.factory.rc \
     init.recovery.qcom.rc
@@ -380,6 +381,7 @@ PRODUCT_COPY_FILES += \
 
 # Ueventd
 PRODUCT_PACKAGES += \
+    ueventd.m2468.rc \
     ueventd.qcom.rc
 
 # Update engine
