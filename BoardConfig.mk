@@ -97,6 +97,66 @@ BOARD_MKBOOTIMG_INIT_ARGS += --header_version $(BOARD_INIT_BOOT_HEADER_VERSION)
 
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
 BOARD_KERNEL_IMAGE_NAME := Image
+TARGET_KERNEL_SOURCE := kernel/meizu/sm8550
+TARGET_KERNEL_ADDITIONAL_FLAGS := CONFIG_M2468_DTBS=y
+TARGET_KERNEL_CONFIG := \
+    gki_defconfig \
+    vendor/kalama_GKI.config \
+    vendor/m2468_GKI.config
+
+BOARD_USES_QCOM_MERGE_DTBS_SCRIPT := true
+TARGET_NEEDS_DTBOIMAGE := true
+
+# Kernel (modules)
+first_stage_modules := $(strip $(shell cat $(DEVICE_PATH)/modules/modules.list.first_stage))
+second_stage_modules := $(strip $(shell cat $(DEVICE_PATH)/modules/modules.list.second_stage))
+vendor_dlkm_modules := $(strip $(shell cat $(DEVICE_PATH)/modules/modules.list.vendor_dlkm))
+system_dlkm_modules := $(strip $(shell sed 's/#.*$$//;/^$$/d;s|.*/||' $(DEVICE_PATH)/modules/modules.list.system_dlkm))
+
+BOARD_SYSTEM_KERNEL_MODULES_LOAD := $(system_dlkm_modules)
+BOARD_SYSTEM_KERNEL_MODULES_BLOCKLIST_FILE := $(TARGET_KERNEL_SOURCE)/modules.systemdlkm_blocklist.msm.kalama
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(first_stage_modules)
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(first_stage_modules) $(second_stage_modules)
+BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(TARGET_KERNEL_SOURCE)/modules.vendor_blocklist.msm.kalama
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(second_stage_modules) $(vendor_dlkm_modules)
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE)
+
+BOOT_KERNEL_MODULES := $(first_stage_modules) $(second_stage_modules)
+SYSTEM_KERNEL_MODULES := $(BOARD_SYSTEM_KERNEL_MODULES_LOAD)
+
+TARGET_KERNEL_EXT_MODULE_ROOT := kernel/meizu/sm8550-modules
+TARGET_KERNEL_EXT_MODULES := \
+    meizu/compat:kbuild \
+    meizu/cs35l43:kbuild \
+    meizu/jiiov_fingerprint:kbuild \
+    meizu/tms_nfc:kbuild
+
+TARGET_KERNEL_EXT_MODULES += \
+    qcom/opensource/mmrm-driver \
+    qcom/opensource/mm-drivers/hw_fence \
+    qcom/opensource/mm-drivers/msm_ext_display \
+    qcom/opensource/mm-drivers/sync_fence \
+    qcom/opensource/securemsm-kernel \
+    qcom/opensource/audio-kernel \
+    qcom/opensource/camera-kernel \
+    qcom/opensource/dataipa/drivers/platform/msm \
+    qcom/opensource/datarmnet/core \
+    qcom/opensource/datarmnet-ext/aps \
+    qcom/opensource/datarmnet-ext/offload \
+    qcom/opensource/datarmnet-ext/shs \
+    qcom/opensource/datarmnet-ext/perf \
+    qcom/opensource/datarmnet-ext/perf_tether \
+    qcom/opensource/datarmnet-ext/sch \
+    qcom/opensource/datarmnet-ext/wlan \
+    qcom/opensource/display-drivers/msm \
+    qcom/opensource/eva-kernel \
+    qcom/opensource/video-driver \
+    qcom/opensource/graphics-kernel \
+    qcom/opensource/touch-drivers \
+    qcom/opensource/wlan/platform \
+    qcom/opensource/wlan/qcacld-3.0/.kiwi_v2 \
+    qcom/opensource/bt-kernel \
+    nxp/opensource/driver
 
 # OTA assert
 TARGET_OTA_ASSERT_DEVICE := m2468,Meizu21Note
