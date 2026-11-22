@@ -67,6 +67,13 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('rpcmem_free')
         .clear_symbol_version('rpcmem_to_fd'),
 
+    # Use the third-party front sensor mode when client metadata is absent.
+    'vendor/lib64/hw/com.qti.chi.override.so': blob_fixup()
+        .sig_replace(
+            'DC 1B 03 94 E0 E3 FF B4 AD 3A 40 A9 B0 CE 85 D2',
+            'DC 1B 03 94 C0 0A 00 B4',
+        ),
+
     (
         'vendor/bin/hw/android.hardware.security.keymint-service-qti',
         'vendor/bin/hw/android.hardware.security.keymint-service-spu-qti',
