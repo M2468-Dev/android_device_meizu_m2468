@@ -29,6 +29,13 @@ install_symlink {
 }
 
 install_symlink {
+    name: "rfs_msm_mpss_readonly_mbnconfig_symlink",
+    vendor: true,
+    installed_location: "rfs/msm/mpss/readonly/mbnconfig",
+    symlink_target: "/data/vendor/mbnconfig",
+}
+
+install_symlink {
     name: "vendor_lib64EGL_adreno_symlink",
     vendor: true,
     installed_location: "lib64/libEGL_adreno.so",
